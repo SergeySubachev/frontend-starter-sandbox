@@ -7,7 +7,9 @@
     "test": "tests"
   },
   "scripts": {
-    "test": "mocha tests/* && exit 0"
+    "test": "mocha tests/* && exit 0",
+	"build": "webpack && exit 0",
+	"start": "webpack-dev-server"
   },
   "author": "",
   "license": "ISC",
@@ -21,5 +23,10 @@
     "mocha": "^5.0.0",
     "webpack": "^3.11.0",
     "webpack-dev-server": "^2.11.1"
+  },
+  module: {
+     rules: [
+         { test: /\.js$/, exclude: /node_modules/, use: ["babel-loader"] }
+     ]
   }
 }
