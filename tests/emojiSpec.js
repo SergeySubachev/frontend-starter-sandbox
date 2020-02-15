@@ -8,4 +8,7 @@ describe("emoji", function() {
     it('should replace smiley with unicode symbol', function(){
         expect(emoji.format("Hi! :)")).to.equal("Hi! ☺");
     });
+    it('should replace several smilies with unicode symbols', function(){
+        expect(emoji.format("Hi! :) Glad to see you! :)")).to.equal("Hi! ☺ Glad to see you! ☺");
+    });
 });
